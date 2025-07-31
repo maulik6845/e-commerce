@@ -339,7 +339,7 @@ export default function AdminOrdersPage() {
                         <DollarSign className="h-4 w-4 text-gray-400" />
                         <span className="text-sm font-medium text-gray-700">Total:</span>
                         <span className="text-sm font-bold text-green-600">
-                          Rs{order.totalPrice.toFixed(2)}
+                          Rs.{order.totalPrice.toFixed(2)}
                         </span>
                       </div>
                     </div>

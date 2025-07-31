@@ -145,7 +145,7 @@ export default function CartDrawer() {
                   />
                   <div className="grid flex-grow gap-2">
                     <h3 className="font-medium text-sm">{item.name}</h3>
-                    <p className="text-muted-foreground text-sm">Rs{item.price.toFixed(2)}</p>
+                    <p className="text-muted-foreground text-sm">Rs.{item.price.toFixed(2)}</p>
                     <div className="flex items-center gap-2">
                       <Button
                         variant="outline"
