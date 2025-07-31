@@ -186,7 +186,7 @@ export default function CartDrawer() {
         <SheetFooter className="mt-4">
           <div className="flex  items-center w-full mb-4 gap-1">
             <span className="text-lg font-semibold">Total: {`  `} </span>
-            <span className="text-lg font-bold">${getTotalPrice().toFixed(2)}</span>
+            <span className="text-lg font-bold">Rs.{getTotalPrice().toFixed(2)}</span>
           </div>
           <Button
             onClick={handleProceedToCheckout}
