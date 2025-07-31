@@ -375,7 +375,7 @@ export default function AdminOrdersPage() {
                                 {item.product.name}
                               </p>
                               <p className="text-xs text-gray-500">
-                                Qty: {item.quantity} × Rs.{item.price.toFixed(2)} = $
+                                Qty: {item.quantity} × Rs.{item.price.toFixed(2)} = Rs.
                                 {(item.quantity * item.price).toFixed(2)}
                               </p>
                             </div>
