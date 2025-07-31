@@ -313,7 +313,7 @@ export default function ProductsPage() {
 
                 <div>
                   <label htmlFor="edit-price" className="block text-sm font-medium text-gray-700">
-                    Price ($)
+                    Price (Rs.)
                   </label>
                   <input
                     type="number"
