@@ -205,7 +205,7 @@ export default function MyOrdersPage() {
                       <Badge className={`${getStatusColor(order.status)} text-white`}>
                         {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
                       </Badge>
-                      <p className="text-lg font-bold mt-1">${order.totalPrice.toFixed(2)}</p>
+                      <p className="text-lg font-bold mt-1">Rs{order.totalPrice.toFixed(2)}</p>
                       {order.status.toLowerCase() === "pending" && (
                         <Button
                           variant="outline"
