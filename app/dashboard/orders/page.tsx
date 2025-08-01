@@ -336,7 +336,7 @@ export default function AdminOrdersPage() {
                         <span className="text-sm text-gray-600">{order.user.email}</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <DollarSign className="h-4 w-4 text-gray-400" />
+                        {/* <DollarSign className="h-4 w-4 text-gray-400" /> */}
                         <span className="text-sm font-medium text-gray-700">Total:</span>
                         <span className="text-sm font-bold text-green-600">
                           Rs.{order.totalPrice.toFixed(2)}
@@ -365,25 +365,35 @@ export default function AdminOrdersPage() {
                             key={index}
                             className="flex items-center space-x-3 p-2 bg-gray-50 rounded"
                           >
-                            <img
-                              src={item.product.image?.trim() || "/placeholder.svg"}
-                              alt={item.product.name}
-                              className="w-12 h-12 object-contain rounded"
-                            />
-                            <div className="flex-1">
-                              <p className="text-sm font-medium text-gray-900">
-                                {item.product.name}
-                              </p>
-                              <p className="text-xs text-gray-500">
-                                Qty: {item.quantity} × Rs.{item.price.toFixed(2)} = Rs.
-                                {(item.quantity * item.price).toFixed(2)}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+    {item.product ? (
+      <>
+        <img
+          src={item.product.image?.trim() || "/placeholder.svg"}
+          alt={item.product.name || "Product image"}
+          className="w-12 h-12 object-cover rounded"
+        />
+        <div>
+          <p className="font-medium">{item.product.name}</p>
+          <p className="text-sm text-gray-600">Rs.{item.product.price}</p>
+        </div>
+      </>
+    ) : (
+      <>
+        <img
+          src="/placeholder.svg"
+          alt="Missing product"
+          className="w-12 h-12 object-cover rounded"
+        />
+        <div>
+          <p className="text-sm text-gray-500">Product no longer exists</p>
+        </div>
+      </>
+    )}
+                   </div>
+                 ))}
+               </div>
+             </div>
+           </div>
                 </div>
               ))}
             </div>

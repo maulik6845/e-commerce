@@ -225,21 +225,21 @@ export default function MyOrdersPage() {
                   <h4 className="font-semibold mb-4">Items Ordered</h4>
                   <div className="space-y-4">
                     {order.products.map((item, index) => (
-                      <div key={index} className="flex items-center gap-4">
-                        <img
-                          src={item.product.image || "/placeholder.svg"}
-                          alt={item.product.name}
-                          className="w-16 h-16 object-cover rounded-md"
-                        />
+                <div key={index} className="flex items-center gap-4">
+                <img
+                src={item.product?.image || "/placeholder.svg"}
+                 alt={item.product?.name || "Product Image"}
+                  className="w-16 h-16 object-cover rounded-md"
+               />
                         <div className="flex-1">
-                          <h5 className="font-medium">{item.product.name}</h5>
+                          <h5 className="font-medium">{item.product?.name}</h5>
                           <p className="text-sm text-gray-600">
-                            Quantity: {item.quantity} × ${item.price.toFixed(2)}
+                            Quantity: {item.quantity} × Rs.{item.price.toFixed(2)}
                           </p>
                         </div>
                         <div className="text-right">
                           <p className="font-semibold">
-                            ${(item.quantity * item.price).toFixed(2)}
+                            Rs.{(item.quantity * item.price).toFixed(2)}
                           </p>
                         </div>
                       </div>
